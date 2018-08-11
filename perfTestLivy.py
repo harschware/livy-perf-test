@@ -23,7 +23,7 @@ def timeResponse( stid, j):
     j = r.json()
     progress = str(j["progress"])
 
-  print( "Status checks: %s, Wait between checks: %s, Wall clock: %.3fs".format( str(count), WAIT, time.time() - start_time) )
+  print( "Status checks: {}, Wait between checks: {:.2f}ms, Wall clock: {:.3f}s".format( str(count), WAIT * 1000, time.time() - start_time) )
   return str(j["id"])
 
 def startNewSession( sid=None ):
@@ -38,6 +38,7 @@ def startNewSession( sid=None ):
       print( "Checking for session = %s" % ( sid ) )
       r = requests.get(host + "/sessions/" + str(sid), headers=headers)
 
+   print( "Sleeping 15s while waiting for session to start" )
    time.sleep(15)
    waiting = 15
    if r.status_code < 200 or r.status_code > 201:
