@@ -6,6 +6,11 @@ from os import environ
 import textwrap;
 import time;
 
+sid = None
+if len(sys.argv) > 1:
+   sid = sys.argv[1]
+
+
 host = "http://localhost:8998"
 headers = {}
 
@@ -30,17 +35,18 @@ def startNewSession( sid=None ):
    if sid is None:
      sid = environ.get("SESSION_ID")
  
+   waiting = 0
    if sid is None:
       print( "No Session Defined" )
       data = {"kind": "spark", "conf" : { "spark.driver.memory" : "512m", "spark.executor.memory": "512m"} }
       r = requests.post( host + "/sessions", data=json.dumps(data), headers=headers )
+      print( "Sleeping 15s while waiting for session to start" )
+      waiting = 15
+      time.sleep(15)
    else:
-      print( "Checking for session = %s" % ( sid ) )
+      print( "Running tests against pre-existing session = %s" % ( sid ) )
       r = requests.get(host + "/sessions/" + str(sid), headers=headers)
 
-   print( "Sleeping 15s while waiting for session to start" )
-   time.sleep(15)
-   waiting = 15
    if r.status_code < 200 or r.status_code > 201:
       r.raise_for_status()
    else:
@@ -59,7 +65,7 @@ def startNewSession( sid=None ):
 
    return sid
 
-sid = startNewSession()
+sid = startNewSession(sid)
 sessions_url = host + "/sessions/" + str(sid)
 
 statements_url = sessions_url + '/statements'
