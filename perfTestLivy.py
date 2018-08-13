@@ -1,20 +1,27 @@
 #!/usr/bin/python
 
-import sys;
-import requests, json;
+import sys
+import requests, json
 from os import environ
-import textwrap;
-import time;
+import textwrap
+import time
+import threading
+import Queue
 
 sid = None
 if len(sys.argv) > 1:
    sid = sys.argv[1]
 
 
-host = "http://localhost:8998"
+host = "http://localhost:8999"
 headers = {}
 
 WAIT=.050
+
+def add_input(input_queue):
+    while True:
+        input_queue.put(sys.stdin.read(1))
+
 
 def timeResponse( stid, j):
   start_time = time.time()
@@ -38,11 +45,12 @@ def startNewSession( sid=None ):
    waiting = 0
    if sid is None:
       print( "No Session Defined" )
-      data = {"kind": "spark", "conf" : { "spark.driver.memory" : "512m", "spark.executor.memory": "512m"} }
+      data = {"kind": "spark", "conf" : { "spark.driver.memory" : "512m", "spark.executor.memory": "5120m"} }
       r = requests.post( host + "/sessions", data=json.dumps(data), headers=headers )
-      print( "Sleeping 15s while waiting for session to start" )
-      waiting = 15
-      time.sleep(15)
+      WAIT_FOR_START=10
+      print( "Sleeping " + str(WAIT_FOR_START) + "s while waiting for session to start" )
+      waiting = WAIT_FOR_START
+      time.sleep(WAIT_FOR_START)
    else:
       print( "Running tests against pre-existing session = %s" % ( sid ) )
       r = requests.get(host + "/sessions/" + str(sid), headers=headers)
@@ -63,6 +71,7 @@ def startNewSession( sid=None ):
         r = requests.get(sessions_url, headers=headers)
         r.raise_for_status
 
+   print( "export SESSION_ID=" + str(sid) ) 
    return sid
 
 sid = startNewSession(sid)
@@ -79,10 +88,19 @@ stid = str(j["id"]);
 qid = timeResponse( stid, j )
 print "Query # %s complete" % ( qid )
 
+# Set us up to check for input
+input_queue = Queue.Queue()
+input_thread = threading.Thread(target=add_input, args=(input_queue,))
+input_thread.daemon = True
+input_thread.start()
+
+# Get the code ready
 with open('code2.scala', 'r') as myfile:
   code2 = myfile.read()
+data = { 'code': textwrap.dedent(code2) }
+
+# Loop on statements
 while True:
-   data = { 'code': textwrap.dedent(code2) }
    r = requests.post(statements_url, data=json.dumps(data), headers=headers)
    r.raise_for_status
    j = r.json()
@@ -90,3 +108,12 @@ while True:
 
    qid = timeResponse( stid, j )
    print "Query # %s complete" % ( qid )
+   # Check for user input, pause for 10 seconds if key entered
+   if not input_queue.empty():
+      userin = input_queue.get()
+      if userin.isdigit():
+        pause = float(userin)*10.0
+      else:
+        pause= 10.0
+      print( "Pausing for " + str(pause) + " seconds..." )
+      time.sleep(pause) 
