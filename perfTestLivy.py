@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 import sys
 import requests, json
@@ -12,8 +12,7 @@ sid = None
 if len(sys.argv) > 1:
    sid = sys.argv[1]
 
-
-host = "http://localhost:8999"
+host = "http://localhost:8998"
 headers = {}
 
 WAIT=.050
@@ -45,7 +44,7 @@ def startNewSession( sid=None ):
    waiting = 0
    if sid is None:
       print( "No Session Defined" )
-      data = {"kind": "spark", "conf" : { "spark.driver.memory" : "512m", "spark.executor.memory": "5120m"} }
+      data = {"kind": "pyspark", "conf" : { "spark.driver.memory" : "512m", "spark.executor.memory": "5120m"} }
       r = requests.post( host + "/sessions", data=json.dumps(data), headers=headers )
       WAIT_FOR_START=10
       print( "Sleeping " + str(WAIT_FOR_START) + "s while waiting for session to start" )
@@ -78,7 +77,7 @@ sid = startNewSession(sid)
 sessions_url = host + "/sessions/" + str(sid)
 
 statements_url = sessions_url + '/statements'
-with open('init.scala', 'r') as myfile:
+with open('initcode.txt', 'r') as myfile:
   initcode = myfile.read()
 data = { 'code': textwrap.dedent(initcode) }
 r = requests.post(statements_url, data=json.dumps(data), headers=headers)
@@ -95,7 +94,7 @@ input_thread.daemon = True
 input_thread.start()
 
 # Get the code ready
-with open('code2.scala', 'r') as myfile:
+with open('perfcode.txt', 'r') as myfile:
   code2 = myfile.read()
 data = { 'code': textwrap.dedent(code2) }
 
