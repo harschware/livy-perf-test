@@ -13,7 +13,7 @@ if is_py2:
 else:
     import queue as queue
 
-host = "http://sshky91pl:8420/api"
+host = "http://localhost:8420/api"
 START_URL = "/v1/spark/shell/start"
 TRANSFORM_URL = "/v1/spark/shell/transform"
 headers = {}
@@ -34,7 +34,7 @@ session.auth = ('dladmin', 'thinkbig')
 def startNewSession():
    r = session.post( host + START_URL, data=json.dumps(data), headers=headers )
    r.raise_for_status()
-   print(r.status_code)
+   # print(r.status_code)
 
 def transformJson( script ): 
    return {"policies":[],"pageSpec":{"firstRow":0,"numRows":64,"firstCol":0,"numCols":1000},"doProfile":False,"doValidate":True,"script":script,"datasources":[],"catalogDatasets":[]}; 
@@ -45,7 +45,7 @@ def timeTransform( code ):
   r = session.post( host + TRANSFORM_URL, json=transformJson(code), headers=headers )
   r.raise_for_status
   j = r.json()
-#  pp.pprint(j)
+  # pp.pprint(j)
 
   count = 1
   status = str(j["status"])

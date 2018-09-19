@@ -12,7 +12,7 @@ sid = None
 if len(sys.argv) > 1:
    sid = sys.argv[1]
 
-host = "http://localhost:8999"
+host = "http://localhost:8998"
 headers = {}
 
 WAIT=.050
