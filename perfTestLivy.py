@@ -12,7 +12,7 @@ sid = None
 if len(sys.argv) > 1:
    sid = sys.argv[1]
 
-host = "http://localhost:8998"
+host = "http://localhost:8999"
 headers = {}
 
 WAIT=.050
@@ -44,7 +44,7 @@ def startNewSession( sid=None ):
    waiting = 0
    if sid is None:
       print( "No Session Defined" )
-      data = {"kind": "pyspark", "conf" : { "spark.driver.memory" : "512m", "spark.executor.memory": "5120m"} }
+      data = {"kind": "spark", "conf" : { "spark.driver.memory" : "768m"} }
       r = requests.post( host + "/sessions", data=json.dumps(data), headers=headers )
       WAIT_FOR_START=10
       print( "Sleeping " + str(WAIT_FOR_START) + "s while waiting for session to start" )
@@ -99,7 +99,8 @@ with open('perfcode.txt', 'r') as myfile:
 data = { 'code': textwrap.dedent(code2) }
 
 # Loop on statements
-while True:
+i = 0
+while not i:
    r = requests.post(statements_url, data=json.dumps(data), headers=headers)
    r.raise_for_status
    j = r.json()
