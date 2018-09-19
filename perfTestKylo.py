@@ -31,6 +31,8 @@ def add_input(input_queue):
 session = requests.Session()
 session.auth = ('dladmin', 'thinkbig')
 
+
+
 def startNewSession():
    r = session.post( host + START_URL, data=json.dumps(data), headers=headers )
    r.raise_for_status()

@@ -1,0 +1,373 @@
+Status checks: 56, Wait between checks: 50.00ms, Wall clock: 4.934s
+Startup and Initial Query Complete
+Status checks: 14, Wait between checks: 50.00ms, Wall clock: 0.958s
+Query # 2 complete
+Status checks: 12, Wait between checks: 50.00ms, Wall clock: 0.823s
+Query # 3 complete
+Status checks: 15, Wait between checks: 50.00ms, Wall clock: 1.027s
+Query # 4 complete
+Status checks: 13, Wait between checks: 50.00ms, Wall clock: 0.919s
+Query # 5 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.741s
+Query # 6 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.659s
+Query # 7 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.641s
+Query # 8 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.711s
+Query # 9 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.641s
+Query # 10 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.626s
+Query # 11 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.553s
+Query # 12 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.632s
+Query # 13 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.609s
+Query # 14 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.631s
+Query # 15 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.689s
+Query # 16 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.624s
+Query # 17 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.537s
+Query # 18 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.540s
+Query # 19 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.551s
+Query # 20 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.547s
+Query # 21 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.536s
+Query # 22 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.564s
+Query # 23 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.536s
+Query # 24 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.526s
+Query # 25 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.535s
+Query # 26 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.537s
+Query # 27 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.552s
+Query # 28 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.531s
+Query # 29 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.531s
+Query # 30 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.531s
+Query # 31 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.535s
+Query # 32 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.528s
+Query # 33 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.539s
+Query # 34 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.527s
+Query # 35 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.595s
+Query # 36 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.532s
+Query # 37 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.528s
+Query # 38 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.523s
+Query # 39 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.590s
+Query # 40 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.534s
+Query # 41 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.535s
+Query # 42 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.593s
+Query # 43 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.585s
+Query # 44 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.552s
+Query # 45 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.531s
+Query # 46 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.526s
+Query # 47 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.583s
+Query # 48 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.591s
+Query # 49 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.518s
+Query # 50 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.588s
+Query # 51 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.584s
+Query # 52 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.578s
+Query # 53 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.542s
+Query # 54 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.535s
+Query # 55 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.583s
+Query # 56 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.592s
+Query # 57 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.581s
+Query # 58 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.605s
+Query # 59 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.588s
+Query # 60 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.584s
+Query # 61 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.627s
+Query # 62 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.644s
+Query # 63 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.584s
+Query # 64 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.661s
+Query # 65 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.577s
+Query # 66 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.641s
+Query # 67 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.582s
+Query # 68 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.594s
+Query # 69 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.580s
+Query # 70 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.575s
+Query # 71 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.672s
+Query # 72 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.572s
+Query # 73 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.574s
+Query # 74 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.607s
+Query # 75 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.589s
+Query # 76 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.579s
+Query # 77 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.603s
+Query # 78 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.577s
+Query # 79 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.642s
+Query # 80 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.575s
+Query # 81 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.637s
+Query # 82 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.671s
+Query # 83 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.653s
+Query # 84 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.637s
+Query # 85 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.589s
+Query # 86 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.592s
+Query # 87 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.596s
+Query # 88 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.634s
+Query # 89 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.636s
+Query # 90 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.634s
+Query # 91 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.634s
+Query # 92 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.672s
+Query # 93 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.640s
+Query # 94 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.636s
+Query # 95 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.666s
+Query # 96 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.632s
+Query # 97 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.633s
+Query # 98 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.659s
+Query # 99 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.631s
+Query # 100 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.637s
+Query # 101 complete
+Status checks: 12, Wait between checks: 50.00ms, Wall clock: 0.689s
+Query # 102 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.629s
+Query # 103 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.635s
+Query # 104 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.661s
+Query # 105 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.628s
+Query # 106 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.627s
+Query # 107 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.655s
+Query # 108 complete
+Status checks: 12, Wait between checks: 50.00ms, Wall clock: 0.692s
+Query # 109 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.643s
+Query # 110 complete
+Status checks: 12, Wait between checks: 50.00ms, Wall clock: 0.688s
+Query # 111 complete
+Status checks: 12, Wait between checks: 50.00ms, Wall clock: 0.686s
+Query # 112 complete
+Status checks: 12, Wait between checks: 50.00ms, Wall clock: 0.695s
+Query # 113 complete
+Status checks: 12, Wait between checks: 50.00ms, Wall clock: 0.686s
+Query # 114 complete
+Status checks: 12, Wait between checks: 50.00ms, Wall clock: 0.691s
+Query # 115 complete
+Status checks: 12, Wait between checks: 50.00ms, Wall clock: 0.692s
+Query # 116 complete
+Status checks: 13, Wait between checks: 50.00ms, Wall clock: 0.760s
+Query # 117 complete
+Status checks: 12, Wait between checks: 50.00ms, Wall clock: 0.697s
+Query # 118 complete
+Status checks: 12, Wait between checks: 50.00ms, Wall clock: 0.685s
+Query # 119 complete
+Status checks: 12, Wait between checks: 50.00ms, Wall clock: 0.692s
+Query # 120 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.511s
+Query # 121 complete
+Status checks: 8, Wait between checks: 50.00ms, Wall clock: 0.451s
+Query # 122 complete
+Status checks: 8, Wait between checks: 50.00ms, Wall clock: 0.495s
+Query # 123 complete
+Status checks: 8, Wait between checks: 50.00ms, Wall clock: 0.459s
+Query # 124 complete
+Status checks: 8, Wait between checks: 50.00ms, Wall clock: 0.451s
+Query # 125 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.533s
+Query # 126 complete
+Status checks: 8, Wait between checks: 50.00ms, Wall clock: 0.460s
+Query # 127 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.506s
+Query # 128 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.507s
+Query # 129 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.502s
+Query # 130 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.508s
+Query # 131 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.578s
+Query # 132 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.501s
+Query # 133 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.501s
+Query # 134 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.536s
+Query # 135 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.505s
+Query # 136 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.513s
+Query # 137 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.507s
+Query # 138 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.504s
+Query # 139 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.505s
+Query # 140 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.504s
+Query # 141 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.565s
+Query # 142 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.508s
+Query # 143 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.512s
+Query # 144 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.522s
+Query # 145 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.502s
+Query # 146 complete
+Status checks: 9, Wait between checks: 50.00ms, Wall clock: 0.512s
+Query # 147 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.570s
+Query # 148 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.562s
+Query # 149 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.565s
+Query # 150 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.567s
+Query # 151 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.561s
+Query # 152 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.560s
+Query # 153 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.623s
+Query # 154 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.562s
+Query # 155 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.569s
+Query # 156 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.585s
+Query # 157 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.569s
+Query # 158 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.563s
+Query # 159 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.592s
+Query # 160 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.564s
+Query # 161 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.580s
+Query # 162 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.576s
+Query # 163 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.566s
+Query # 164 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.647s
+Query # 165 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.568s
+Query # 166 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.566s
+Query # 167 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.595s
+Query # 168 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.559s
+Query # 169 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.625s
+Query # 170 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.643s
+Query # 171 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.572s
+Query # 172 complete
+Status checks: 10, Wait between checks: 50.00ms, Wall clock: 0.584s
+Query # 173 complete
+Status checks: 12, Wait between checks: 50.00ms, Wall clock: 1.472s
+Query # 174 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.621s
+Query # 175 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.625s
+Query # 176 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.622s
+Query # 177 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.619s
+Query # 178 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.619s
+Query # 179 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.626s
+Query # 180 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.628s
+Query # 181 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.614s
+Query # 182 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.621s
+Query # 183 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.618s
+Query # 184 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.615s
+Query # 185 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.618s
+Query # 186 complete
+Status checks: 11, Wait between checks: 50.00ms, Wall clock: 0.621s
