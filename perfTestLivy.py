@@ -15,6 +15,9 @@ if len(sys.argv) > 1:
 host = "http://localhost:8998"
 headers = {}
 
+CODE_KIND = 'pyspark'
+CODE_KIND = 'spark'
+
 WAIT=.050
 
 def add_input(input_queue):
@@ -44,7 +47,7 @@ def startNewSession( sid=None ):
    waiting = 0
    if sid is None:
       print( "No Session Defined" )
-      data = {"kind": "spark", "conf" : { "spark.driver.memory" : "768m"} }
+      data = {"kind": "shared", "conf" : { "spark.driver.memory" : "768m"} }
       r = requests.post( host + "/sessions", data=json.dumps(data), headers=headers )
       WAIT_FOR_START=10
       print( "Sleeping " + str(WAIT_FOR_START) + "s while waiting for session to start" )
@@ -79,7 +82,7 @@ sessions_url = host + "/sessions/" + str(sid)
 statements_url = sessions_url + '/statements'
 with open('initcode.txt', 'r') as myfile:
   initcode = myfile.read()
-data = { 'code': textwrap.dedent(initcode) }
+data = { 'kind' :  CODE_KIND, 'code': textwrap.dedent(initcode) }
 r = requests.post(statements_url, data=json.dumps(data), headers=headers)
 j = r.json()
 stid = str(j["id"]);
@@ -96,7 +99,7 @@ input_thread.start()
 # Get the code ready
 with open('perfcode.txt', 'r') as myfile:
   code2 = myfile.read()
-data = { 'code': textwrap.dedent(code2) }
+data = { 'kind' : CODE_KIND, 'code': textwrap.dedent(code2) }
 
 # Loop on statements
 i = 0

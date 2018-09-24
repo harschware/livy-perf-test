@@ -63,6 +63,7 @@ def timeTransform( code ):
     status = str(j["status"])
 
   print( "Status checks: {}, Wait between checks: {:.2f}ms, Wall clock: {:.3f}s".format( str(count), WAIT * 1000, time.time() - start_time) )
+#  pp.pprint(j)
   return
 
 ############################## MAIN #################################
