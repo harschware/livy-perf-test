@@ -1,22 +1,35 @@
 #!/usr/bin/env python
 
-import sys
+import sys, pprint
 import requests, json
 from os import environ
+import os
 import textwrap
 import time
 import threading
 import Queue
+from optparse import OptionParser
+
+
+
+parser = OptionParser()
+parser.add_option("-o", "--output", dest="output",
+                  help="Name of log file", metavar="FILE")
+(options, args) = parser.parse_args()
+
+if options.output: 
+  sys.stdout = open(options.output, 'w', 0)
 
 sid = None
-if len(sys.argv) > 1:
-   sid = sys.argv[1]
+if len(args) > 1:
+   sid = args[1]
 
 host = "http://localhost:8998"
 headers = {}
 
-CODE_KIND = 'pyspark'
-CODE_KIND = 'spark'
+pp = pprint.PrettyPrinter(indent=4)
+
+CODE_KIND = os.getenv("CODE_KIND","spark")
 
 WAIT=.050
 
@@ -38,6 +51,7 @@ def timeResponse( stid, j):
     progress = str(j["progress"])
 
   print( "Status checks: {}, Wait between checks: {:.2f}ms, Wall clock: {:.3f}s".format( str(count), WAIT * 1000, time.time() - start_time) )
+  #pp.pprint(j)
   return str(j["id"])
 
 def startNewSession( sid=None ):
