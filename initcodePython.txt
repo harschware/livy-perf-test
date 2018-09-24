@@ -1,4 +1,6 @@
 from pyspark.sql import SQLContext
+from pyspark.sql.functions import *
+
 sqlContext = SQLContext(sc)
 df = sqlContext.read.format("com.databricks.spark.csv").option("header", "true").option("inferschema", "true").option("mode", "DROPMALFORMED").load("file:///tmp/venue.csv")
 df = df.limit(1000)

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import sys, pprint
 import requests, json
@@ -7,18 +7,29 @@ import os
 import textwrap
 import time
 import threading
-import Queue
 from optparse import OptionParser
-
+is_py2 = sys.version[0] == '2'
+if is_py2:
+    import Queue as queue
+else:
+    import queue as queue
 
 
 parser = OptionParser()
+parser.add_option("-k", "--kind", dest="kind",
+                  help="Code Kind (Required)", metavar="FILE")
 parser.add_option("-o", "--output", dest="output",
                   help="Name of log file", metavar="FILE")
 (options, args) = parser.parse_args()
 
-if options.output: 
-  sys.stdout = open(options.output, 'w', 0)
+if not options.kind:   #
+    print("!!! Required Argument Missing !!!\n")
+    parser.print_help()
+    sys.exit()
+
+if options.output:
+    sys.stdout.flush()
+    sys.stdout = open(options.output, 'w')
 
 sid = None
 if len(args) > 1:
@@ -51,7 +62,7 @@ def timeResponse( stid, j):
     progress = str(j["progress"])
 
   print( "Status checks: {}, Wait between checks: {:.2f}ms, Wall clock: {:.3f}s".format( str(count), WAIT * 1000, time.time() - start_time) )
-  #pp.pprint(j)
+  pp.pprint(j)
   return str(j["id"])
 
 def startNewSession( sid=None ):
@@ -60,15 +71,17 @@ def startNewSession( sid=None ):
  
    waiting = 0
    if sid is None:
-      print( "No Session Defined" )
+      print( "No Session Defined")
       data = {"kind": "shared", "conf" : { "spark.driver.memory" : "768m"} }
       r = requests.post( host + "/sessions", data=json.dumps(data), headers=headers )
       WAIT_FOR_START=10
-      print( "Sleeping " + str(WAIT_FOR_START) + "s while waiting for session to start" )
+      msg = "Sleeping " + str(WAIT_FOR_START) + "s while waiting for session to start"
+      print( msg )
       waiting = WAIT_FOR_START
       time.sleep(WAIT_FOR_START)
    else:
-      print( "Running tests against pre-existing session = %s" % ( sid ) )
+      msg = "Running tests against pre-existing session = %s" % ( sid )
+      print( msg )
       r = requests.get(host + "/sessions/" + str(sid), headers=headers)
 
    if r.status_code < 200 or r.status_code > 201:
@@ -82,12 +95,14 @@ def startNewSession( sid=None ):
             break
         time.sleep( 1 )
         waiting = waiting + 1
-        print( "Waited %s seconds for Session %s to start" % ( waiting, sid ) )
+        msg = "Waited %s seconds for Session %s to start" % ( waiting, sid )
+        print( msg )
         sessions_url = host + "/sessions/" + str(sid)
         r = requests.get(sessions_url, headers=headers)
         r.raise_for_status
 
-   print( "export SESSION_ID=" + str(sid) ) 
+   msg = "export SESSION_ID=" + str(sid)
+   print( msg )
    return sid
 
 sid = startNewSession(sid)
@@ -102,10 +117,11 @@ j = r.json()
 stid = str(j["id"]);
 
 qid = timeResponse( stid, j )
-print "Query # %s complete" % ( qid )
+msg = "Query # %s complete" % ( qid )
+print( msg )
 
 # Set us up to check for input
-input_queue = Queue.Queue()
+input_queue = queue.Queue()
 input_thread = threading.Thread(target=add_input, args=(input_queue,))
 input_thread.daemon = True
 input_thread.start()
@@ -124,7 +140,8 @@ while not i:
    stid = str(j["id"]);
 
    qid = timeResponse( stid, j )
-   print "Query # %s complete" % ( qid )
+   msg = "Query # %s complete" % ( qid )
+   print( msg )
    # Check for user input, pause for 10 seconds if key entered
    if not input_queue.empty():
       userin = input_queue.get()
@@ -132,5 +149,6 @@ while not i:
         pause = float(userin)*10.0
       else:
         pause= 10.0
-      print( "Pausing for " + str(pause) + " seconds..." )
-      time.sleep(pause) 
+      msg = "Pausing for " + str(pause) + " seconds..."
+      print( msg )
+      time.sleep(pause)
